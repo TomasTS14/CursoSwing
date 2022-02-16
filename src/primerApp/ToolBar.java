@@ -11,18 +11,25 @@ import java.awt.event.*; //SUPER NECESARIO IMPORTAR EN VS STUDIO, NO LO IMPORTA 
 public class ToolBar extends JPanel implements ActionListener {
   private JButton diceHolaBoton;
   private JButton diceChaoBoton;
+  private JButton teInsulta;
   private TextPanel textPanel;
   private StringListener textListener;
 
   public ToolBar(){
   setLayout(new FlowLayout(FlowLayout.LEFT)); //Sera el Layout para toda la toolBar,, solo puede tener una direccion, que va como param ene l constructor.
    diceHolaBoton = new JButton("Hola");
-   diceChaoBoton = new JButton("Chao"); //Inicializo dentro del constructor. 
+   diceChaoBoton = new JButton("Chao"); //Inicializo dentro del constructor.
+    teInsulta = new JButton("Tonto");
+
+
   diceHolaBoton.addActionListener(this);//Aqui le agrego a los dos botones su
   // listener, que es el que implementa la clase toolbar, y esta entonces en objeto toolbar tambien, usa su propio
   diceChaoBoton.addActionListener(this);
-   add(diceHolaBoton);
-   add(diceChaoBoton);
+  teInsulta.addActionListener(this);
+
+  add(diceHolaBoton);
+  add(diceChaoBoton);
+  add(teInsulta);
 
 
 
@@ -41,20 +48,24 @@ public class ToolBar extends JPanel implements ActionListener {
   }
   
     @Override
-    public void actionPerformed(ActionEvent e){
-      JButton clicked =(JButton) e.getSource(); //(Se que e se refiere a JButton asi quie puedo castear para facilitar)
+    public void actionPerformed(ActionEvent e) {
+      JButton clicked = (JButton) e.getSource(); //(Se que e se refiere a JButton asi quie puedo castear para facilitar)
 
-      if (clicked == diceHolaBoton){
-        if(textListener != null){
+      if (clicked == diceHolaBoton) {
+        if (textListener != null) {
           textListener.textEmitted("Hola");
 
         }
-      }else if(clicked == diceChaoBoton){
-        if(textListener != null){
+      } else if (clicked == diceChaoBoton) {
+        if (textListener != null) {
           textListener.textEmitted("Chao");
 
         }
+      } else if (clicked == teInsulta) {
+        if (textListener != null) {
+          textListener.textEmitted("TOntooooo");
+        }
       }
+
     }
-    
 }

@@ -34,7 +34,7 @@ public class MainFrame extends JFrame { //<----mi MainFrame es un JFrame
       add(boton1, BorderLayout.SOUTH);
 
 
-      toolBar.setTextPanel(textPanel); //La toolBar está actuando sobre este el textPanel que le paso
+      //toolBar.setTextPanel(textPanel); //La toolBar está actuando sobre este el textPanel que le paso
                                       // en este caso el textPanel del mainframe, los interconecto. Toolbar tiene sus propias instrucciones sobre sus botone
 
       toolBar.setStringListener(new StringListener(){ //Constructor por defecto y declarando metodos de interfaz dentro.  
