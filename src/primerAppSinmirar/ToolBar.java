@@ -19,11 +19,12 @@ public class ToolBar extends JPanel implements ActionListener {
         gritoBoton = new JButton("!!!!!");
         duermoBoton = new JButton("Zzz");
         imageBoton = new JButton("Agrega imagen");
-        icono=new JLabel(new ImageIcon(MainFrame.class.getResource("/dog.png")));
+
         setLayout(new FlowLayout(FlowLayout.LEFT));
         gritoBoton.addActionListener(this);
         duermoBoton.addActionListener(this);
         duermoBoton.addActionListener(this);
+        imageBoton.addActionListener(this);
         add(gritoBoton);
         add(duermoBoton);
         add(imageBoton);
@@ -34,34 +35,39 @@ public class ToolBar extends JPanel implements ActionListener {
         textListener = listener;
     }
 
-    public void setImageListener(IconListener listener){
-        iconListener= listener;
+    public void setImageListener(IconListener listener) {
+        iconListener = listener;
     }
-    @Override
 
+    @Override
     public void actionPerformed(ActionEvent e) {
 
         JButton clicked = (JButton) e.getSource();
 
-
-
         if (clicked == gritoBoton) {
-            if (textListener != null){
+            if (textListener != null) {
                 textListener.textEmitted("AAAAAAAAAAAAA");
             }
 
         } else if (clicked == duermoBoton) {
-           if(textListener!= null){
-               textListener.textEmitted("Zzzzzzz");
-           }
-        }else if (clicked == imageBoton){
-            if(iconListener != null){
+            if (textListener != null) {
+                textListener.textEmitted("Zzzzzzz");
+            }
+        } else if (clicked == imageBoton) {
+
+            if (iconListener != null && icono == null) {
+                icono = new JLabel(new ImageIcon(MainFrame.class.getResource("/perroMarronAnimadoChiqui.gif")));
                 iconListener.emittedImage(icono);
+                }
+            //else if (iconListener != null && icono != null){
+//                icono= null;
+//            }
             }
         }
+
     }
 
-}
+
 
 
 

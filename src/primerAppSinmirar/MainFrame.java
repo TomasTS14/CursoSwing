@@ -36,8 +36,7 @@ public class MainFrame extends JFrame {
             @Override
             public void emittedImage(JLabel i) {
                 panel.appendImage(i);
-                repaint();
-                validate();
+
             }
         });
 
