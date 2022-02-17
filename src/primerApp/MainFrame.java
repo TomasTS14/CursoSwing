@@ -23,7 +23,7 @@ public class MainFrame extends JFrame { //<----mi MainFrame es un JFrame
       setVisible(true); //<----No por defecto. 
     
 
-      //Voy inicilizando mis partes.
+      //Voy inicializando mis partes.
       textPanel= new TextPanel();
       boton1= new JButton("Dame click wey");//<--Texto aqui dentro es lo que dice el boton
       toolBar= new ToolBar();
@@ -40,7 +40,9 @@ public class MainFrame extends JFrame { //<----mi MainFrame es un JFrame
       toolBar.setStringListener(new StringListener(){ //Constructor por defecto y declarando metodos de interfaz dentro.  
         //El objeto toolbar referencia una inicialización anonima que imprime determinado texto (En su propio actionPerformed)
         public void textEmitted(String texto){
-          textPanel.appendText(texto);
+
+            //textPanel.appendText(texto);
+            System.out.println(texto);
         }
       });
 

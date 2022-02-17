@@ -9,7 +9,7 @@ public class TextPanel extends JPanel {
     private JTextArea textArea;
     private JPanel panelImagen;
     //Prueba imagen
-    private JLabel iconoLabel;
+    //private JLabel iconoLabel;
     public TextPanel() {
         super();
         textArea = new JTextArea();

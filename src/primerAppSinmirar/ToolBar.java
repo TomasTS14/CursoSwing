@@ -23,7 +23,6 @@ public class ToolBar extends JPanel implements ActionListener {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         gritoBoton.addActionListener(this);
         duermoBoton.addActionListener(this);
-        duermoBoton.addActionListener(this);
         imageBoton.addActionListener(this);
         add(gritoBoton);
         add(duermoBoton);
@@ -59,9 +58,9 @@ public class ToolBar extends JPanel implements ActionListener {
                 icono = new JLabel(new ImageIcon(MainFrame.class.getResource("/perroMarronAnimadoChiqui.gif")));
                 iconListener.emittedImage(icono);
                 }
-            //else if (iconListener != null && icono != null){
-//                icono= null;
-//            }
+            else if (iconListener != null && icono != null){
+               icono= null;
+           }
             }
         }
 

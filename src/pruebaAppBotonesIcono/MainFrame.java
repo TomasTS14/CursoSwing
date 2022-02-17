@@ -16,7 +16,7 @@ public class MainFrame extends JFrame { //<----mi MainFrame es un JFrame
     private ToolBar toolBar;
 
     public MainFrame(){
-        super();   //<------------usa todo lo de su padre, JFrame.
+        super();   //<------------usa ztodo lo de su padre, JFrame.
       //Empiezo a darle tamaño y forma. 
       setSize(600,400); //<--------No tengo que decir this. no hay ambigüedad. 
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //Metodo de clase JFrame que cierra proceso al cerrar JFrame. 
